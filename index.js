@@ -38,3 +38,59 @@ function reverseNumber(num) {
   console.log(isPalindrome(palindrome2));  
   console.log(isPalindrome(notPalindrome)); 
   
+
+  //3
+  function generateCombinations(str) {
+    const results = [];
+    for (let i = 0; i < str.length; i++) {
+      for (let j = i; j < str.length; j++) {
+        results.push(str.slice(i, j + 1)); // Include substrings from i to j (inclusive)
+      }
+    }
+    return results.join(", "); // Join results for output
+  }
+  
+  const string = "dog";
+  const combinations = generateCombinations(string);
+  console.log(combinations); // Output: d,do,dog,o,og,g
+  
+
+  //4
+  function sortString(str) {
+    return str.split("").sort().join(""); // Split to array, sort, join back
+  }
+  
+  const string = "webmaster";
+  const sortedString = sortString(string);
+  console.log(sortedString); // Output: abeemrstw
+  
+
+  //5
+  function capitalizeFirstLetters(str) {
+    const words = str.split(" ");
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+    }
+    return words.join(" "); // Join words back with spaces
+  }
+  
+  const string = "the quick brown fox";
+  const capitalizedString = capitalizeFirstLetters(string);
+  console.log(capitalizedString); // Output: The Quick Brown Fox
+
+  //6
+  function findLongestWord(str) {
+    const words = str.split(" ");
+    let longestWord = "";
+    for (const word of words) {
+      if (word.length > longestWord.length) {
+        longestWord = word;
+      }
+    }
+    return longestWord;
+  }
+  
+  const string = "Web Development Tutorial";
+  const longestWord = findLongestWord(string);
+  console.log(longestWord); // Output: Development
+  
