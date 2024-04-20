@@ -27,7 +27,7 @@ function reverseNumber(num) {
       left++;
       right--;
     }
-    return true; 
+    return  true; 
   }
   
   const palindrome1 = "madam";
