@@ -5,7 +5,7 @@ function reverseNumber(num) {
     for (let digit of num.toString()) {  
       reversed = reversed * 10 + parseInt(digit); 
     }
-    return reversed;
+    return  reversed;
   }
   
   const x = 3224993;
